@@ -1,10 +1,10 @@
 # Marriage Counselor Agent
 
-A multi-agent marriage counseling support system built with Google's Agent Development Kit (ADK).
+A comprehensive multi-agent marriage counseling support system built with Google's Agent Development Kit (ADK).
 
 ## Overview
 
-The Marriage Counselor Agent is a responsible AI system designed to provide support for individuals and couples navigating relationship challenges. It uses a multi-agent architecture with specialized sub-agents for active listening, emotion analysis, resource provision, and many more.
+The Marriage Counselor Agent is a responsible AI system designed to provide holistic support for individuals and couples navigating relationship challenges. It uses a sophisticated multi-agent architecture with **11 specialized sub-agents** covering every aspect of relationship health, from assessment and goal setting to conflict resolution, intimacy building, and crisis intervention.
 
 ## Why?
 
@@ -12,40 +12,121 @@ While general-purpose Large Language Models (LLMs) can provide basic advice, rel
 
 Asking a standard LLM for marriage advice often results in generic, one-size-fits-all platitudes, and the model tends to exhibit "sycophancy"—agreeing with the user who is prompting it, rather than remaining an objective mediator.
 
-The **Marriage Counselor Agent** solves this by leveraging a structured, multi-agent framework:
+The **Marriage Counselor Agent** solves this by leveraging a structured, multi-agent framework with 31 specialized tools:
 
-* **Separation of Concerns (Specialized Agents):** Instead of relying on one model to do everything, this system delegates tasks. An *Active Listening Agent* validates emotions, an *Emotion Analyzer* reads subtext and detects communication breakdowns, and a *Resource Provider* queries a dedicated knowledge management system for proven relationship frameworks (e.g., conflict resolution techniques).
-* **Objective Mediation:** Standard LLMs inherently bias toward the user writing the prompt. A multi-agent system can process inputs from both partners simultaneously, cross-reference them, and provide a neutral, balanced perspective without taking sides.
-* **Contextual Continuity:** Relationship dynamics are complex and historical. This system is designed to maintain structured memory and context across multiple sessions, recognizing patterns in behavior or recurring arguments that a stateless LLM would forget.
-* **Responsible AI Guardrails:** Built with safety in mind. The system includes strict monitoring agents that detect when a situation escalates beyond the scope of AI assistance (e.g., signs of abuse or severe psychological distress) and automatically provides routing to human professionals.
+* **Specialist Agents:** Instead of relying on one model to do everything, this system delegates to 11 expert agents:
+  - **Active Listening Agent** - Validates emotions with empathy
+  - **Emotion Analysis Agent** - Detects patterns and subtext
+  - **Resource Provider Agent** - Proven frameworks and strategies
+  - **Relationship Assessment Agent** - Evaluates 10 dimensions of health
+  - **Goal Setting Agent** - SMART goals and shared vision
+  - **Conflict Resolution Agent** - Pattern analysis and de-escalation
+  - **Values Alignment Agent** - Finds common ground in differences
+  - **Repair & Healing Agent** - Apologies, forgiveness, trust rebuilding
+  - **Intimacy Specialist Agent** - Emotional and physical connection
+  - **Boundary Specialist Agent** - Healthy limits and autonomy
+  - **Stress Management Agent** - External pressures and resilience
 
-In short, the Marriage Counselor Agent transforms a simple Q&A chatbot into a comprehensive, analytical, and objective support system for relationship management.
+* **Objective Mediation:** The system can process inputs from both partners simultaneously, cross-reference them, and provide neutral, balanced perspectives without taking sides.
+
+* **Contextual Continuity:** With built-in memory capabilities, the system maintains structured context across sessions, recognizing patterns in behavior or recurring arguments that a stateless LLM would forget.
+
+* **Responsible AI Guardrails:** Built with safety first. The system includes strict monitoring for crisis situations (abuse, self-harm, severe distress) with automatic routing to human professionals.
 
 ## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                     Counseling Coordinator                      │
-│                   (Root Agent - Orchestrator)                   │
+│              (Root Agent - Orchestrator + Memory)               │
+│                  11 Specialist Sub-Agents                       │
+│                    31 Specialized Tools                         │
 └─────────────────────────────────────────────────────────────────┘
                               │
         ┌─────────────────────┼─────────────────────┐
         │                     │                     │
+    Core Agents          Assessment          Growth & Healing
+        │                     │                     │
         ▼                     ▼                     ▼
 ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-│    Active    │    │  Emotion    │    │  Resource   │
-│  Listening   │    │  Analysis   │    │  Provider   │
-│    Agent     │    │    Agent    │    │    Agent    │
-└──────────────┘    └──────────────┘    └──────────────┘
+│    Active    │    │ Relationship │    │   Conflict   │
+│  Listening   │    │ Assessment   │    │ Resolution   │
+├──────────────┤    ├──────────────┤    ├──────────────┤
+│   Emotion    │    │  Goal        │    │   Values     │
+│  Analysis    │    │  Setting     │    │ Alignment    │
+├──────────────┤    ├──────────────┤    ├──────────────┤
+│  Resource    │    │   Repair     │    │  Intimacy    │
+│  Provider    │    │  & Healing   │    │  Specialist  │
+└──────────────┘    └──────────────┘    ├──────────────┤
+                                        │   Boundary   │
+                                        │  Specialist  │
+                                        ├──────────────┤
+                                        │   Stress     │
+                                        │ Management   │
+                                        └──────────────┘
 ```
 
 ## Features
 
+### Core Capabilities
 - **Active Listening**: Empathetic reflection and validation
-- **Emotion Analysis**: Pattern recognition and insight
-- **Resource Provision**: Communication exercises and coping strategies
-- **Crisis Detection**: Immediate resource provision for urgent situations
-- **Safety First**: Professional referral recommendations
+- **Emotion Analysis**: Pattern recognition and emotional insight
+- **Resource Provision**: Communication exercises and proven strategies
+- **Memory & Context**: Remembers past conversations for personalized support
+
+### Relationship Assessment
+- **10-Dimension Health Evaluation**: Communication, intimacy, trust, conflict resolution, commitment, shared values, life vision, physical connection, financial partnership, and stress management
+- **Relationship Stage Identification**: Honeymoon, power struggle, stability, crisis, or renewal
+- **Comprehensive Reporting**: Detailed assessment with actionable recommendations
+
+### Goal Setting & Growth
+- **SMART Goal Framework**: Specific, Measurable, Achievable, Relevant, Time-bound goals
+- **Shared Vision Creation**: Align on life direction and dreams together
+- **Progress Tracking**: Monitor and celebrate relationship growth
+- **Action Planning**: Daily, weekly, and monthly actionable steps
+
+### Conflict Resolution
+- **Pattern Analysis**: Identify pursue-withdraw, escalation, avoidance cycles
+- **De-escalation Techniques**: Immediate tools for reducing tension
+- **Structured Resolution**: 6-step framework for solving specific conflicts
+- **Post-Conflict Repair**: Reconnection and healing processes
+
+### Values & Life Alignment
+- **Personal Values Discovery**: 8 categories of life values
+- **Shared Values Mapping**: Find common ground and complementary differences
+- **Value Conflict Navigation**: Finances, family, lifestyle, career alignment
+- **Life Vision Creation**: Build shared meaning and direction
+
+### Repair & Healing
+- **Repair Process Guidance**: Navigate betrayal, emotional distance, disrespect
+- **Sincere Apology Framework**: 6-component effective apologies
+- **Forgiveness Support**: Decision, process, and outcome stages
+- **Trust Rebuilding**: After infidelity, deception, broken promises
+
+### Intimacy Building
+- **Emotional Intimacy**: Daily practices and deepening exercises
+- **Physical Intimacy**: Healthy affection, communication, and safety
+- **Quality Time Planning**: Daily to annual shared experiences
+- **Fondness & Admiration**: Strengthen friendship and appreciation
+
+### Boundary Setting
+- **Assertive Communication**: Set healthy limits respectfully
+- **Personal Boundaries**: Explore and define your needs
+- **Violation Addressing**: Handle when boundaries are crossed
+- **Family Boundaries**: Navigate extended family and in-law relationships
+- **Autonomy in Togetherness**: Balance we with me
+
+### Stress Management
+- **External Stressors**: Work, financial, family, health pressures
+- **Work-Life Balance**: Protect relationship from career demands
+- **Life Transitions**: New parenthood, job changes, relocation, grief
+- **Resilience Building**: Strengthen capacity to handle challenges
+
+### Safety First
+- **Crisis Detection**: Suicide, domestic violence, severe mental health
+- **Immediate Resources**: Hotlines and emergency contacts
+- **Professional Referral**: When to seek human therapy
+- **Safety Planning**: Protection and support protocols
 
 ## Prerequisites
 
@@ -124,7 +205,7 @@ python deployment/test_deployment.py --local
 # Run unit tests
 pytest tests/unit
 
-# Run evaluation tests
+# Run end-to-end evaluation
 pytest tests/eval
 
 # Run all tests
@@ -149,22 +230,53 @@ The agent will immediately provide:
 - National Domestic Violence Hotline: 1-800-799-7233
 - Crisis Text Line: Text HOME to 741741
 
+### When to Seek Professional Help
+
+The agent will recommend professional counseling for:
+- Ongoing abuse or safety concerns
+- Severe mental health conditions
+- Deep-seated trauma
+- Complex relationship patterns requiring therapy
+- When issues persist despite best efforts
+
 ## Project Structure
 
 ```
 marriage-counselor-agent/
 ├── marriage_counselor/
 │   ├── __init__.py
-│   ├── agent.py                 # Root agent
-│   ├── config.py                # Configuration
-│   ├── prompts.py               # System prompts
-│   ├── sub_agents/              # Specialist agents
-│   ├── tools/                   # Agent tools
+│   ├── agent.py                 # Root agent with 11 sub-agents
+│   ├── config.py                # Configuration & environment
+│   ├── prompts.py               # System prompts & instructions
+│   ├── sub_agents/              # 11 Specialist agents
+│   │   ├── active_listening.py  # Empathetic reflection
+│   │   ├── emotion_analysis.py  # Pattern recognition
+│   │   ├── resource_provider.py # Frameworks & strategies
+│   │   ├── relationship_assessment.py # Health evaluation
+│   │   ├── goal_setting.py      # SMART goals & vision
+│   │   ├── conflict_resolution.py # De-escalation & repair
+│   │   ├── values_alignment.py  # Shared values discovery
+│   │   ├── repair_healing.py    # Forgiveness & trust
+│   │   ├── intimacy_specialist.py # Connection building
+│   │   ├── boundary_specialist.py # Healthy limits
+│   │   └── stress_management.py # External pressures
+│   ├── tools/                   # 31 Specialized tools
+│   │   ├── communication_tools.py
+│   │   ├── emotion_tools.py
+│   │   ├── safety_tools.py
+│   │   ├── relationship_assessment_tools.py
+│   │   ├── goal_setting_tools.py
+│   │   ├── conflict_resolution_tools.py
+│   │   ├── values_tools.py
+│   │   ├── repair_tools.py
+│   │   ├── intimacy_tools.py
+│   │   ├── boundary_tools.py
+│   │   └── stress_tools.py
 │   ├── callbacks/               # Safety callbacks
 │   └── schemas/                 # Input/output schemas
 ├── tests/
-│   ├── unit/                    # Unit tests
-│   └── eval/                    # Evaluation tests
+│   ├── unit/                    # 49 unit tests
+│   └── eval/                    # 9 evaluation tests
 ├── deployment/                  # Deployment files
 ├── .env.example                 # Example environment file
 ├── pyproject.toml               # Project dependencies
@@ -199,16 +311,36 @@ agent-starter-pack create my-counselor -a adk@marriage_counselor
 ### Adding New Tools
 
 1. Define the tool function in `marriage_counselor/tools/`
-2. Add type hints and docstrings
+2. Add type hints and comprehensive docstrings
 3. Import in `tools/__init__.py`
-4. Add to agent's `tools` list
+4. Add to appropriate agent's `tools` list
+5. Add unit tests in `tests/unit/test_tools.py`
 
 ### Adding New Sub-Agents
 
 1. Create agent file in `marriage_counselor/sub_agents/`
-2. Define agent with LlmAgent
+2. Define agent with LlmAgent, instruction, and tools
 3. Import in `sub_agents/__init__.py`
-4. Add as AgentTool to coordinator
+4. Add as AgentTool to coordinator in `agent.py`
+5. Add evaluation tests in `tests/eval/test_agent_eval.py`
+
+### Testing Guidelines
+
+- Unit tests should verify tool outputs have expected structure
+- Evaluation tests should verify agent behavior with real inputs
+- All tests must pass before merging changes
+- Test coverage should increase with new features
+
+## System Capabilities Summary
+
+| Component | Count | Description |
+|-----------|-------|-------------|
+| **Sub-Agents** | 11 | Specialized AI agents for each domain |
+| **Tools** | 31 | Functions providing expert frameworks |
+| **Tool Categories** | 8 | Communication, emotion, safety, assessment, goals, conflict, values, repair, intimacy, boundaries, stress |
+| **Unit Tests** | 49 | Tests for all tool functions |
+| **Evaluation Tests** | 9 | End-to-end agent behavior tests |
+| **Memory** | ✓ | Long-term conversation context |
 
 ## License
 
@@ -220,4 +352,5 @@ Apache License 2.0
 
 For issues and questions:
 - Review the ADK documentation: https://google.github.io/adk-docs/
+- Google ADK GitHub: https://github.com/google/adk
 - Check samples: https://github.com/google/adk-samples
