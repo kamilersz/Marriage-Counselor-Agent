@@ -7,11 +7,6 @@ A multi-agent marriage counseling support system built with Google's Agent Devel
 The Marriage Counselor Agent is a responsible AI system designed to provide support for individuals and couples navigating relationship challenges. It uses a multi-agent architecture with specialized sub-agents for active listening, emotion analysis, resource provision, and many more.
 
 ## Why?
-Berikut adalah draf untuk melengkapi bagian **Why?** di README Anda. Penjelasan ini dirancang untuk menonjolkan keunggulan arsitektur *agentic AI* dibandingkan dengan model bahasa besar (LLM) standar, sehingga terdengar jauh lebih profesional dan meyakinkan secara teknis.
-
----
-
-## Why?
 
 While general-purpose Large Language Models (LLMs) can provide basic advice, relationship counseling requires a level of nuance, long-term context, and structured analysis that a single-prompt interface simply cannot deliver.
 
